@@ -1,0 +1,4 @@
+// Font size
+@function fontSize($n){
+  @return ($n / 100 );
+}

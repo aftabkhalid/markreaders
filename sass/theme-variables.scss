@@ -1,0 +1,43 @@
+//
+// Typography
+
+$container-max-widths: (
+  xl: 1140px
+);
+
+$theme-font-family-base:     'Roboto', sans-serif;
+$theme-font-family-heading:  'Archivo Black', sans-serif;
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+
+$h1-font-size:                $font-size-base * 2.625;
+$h2-font-size:                $font-size-base * 2.25;
+$h3-font-size:                $font-size-base * 2;
+$h4-font-size:                $font-size-base * 1.625;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+//
+// Color system
+
+// Light colors for texts
+$mk-gray-100:       #f9fafb;
+$mk-gray-200:       #f4f6f8;
+$mk-gray-300:       #dfe3e8;
+$mk-gray-400:       #c4cdd5;
+
+// Dark colors for background
+$mk-gray-500:       #919eab;
+$mk-gray-600:       #637381;
+$mk-gray-700:       #454f5b;
+$mk-gray-800:       #212b36;
+
+//Theme colors
+$mk-dark-blue:      #212B36;
+$mk-silver:         #9da4b8;
+
+$mk-blue:           #0A03EB;
+$mk-purple:         #590FD8;
+$mk-light-blue:     #3A86FF;
+$mk-green:          #06BEE1;
+$mk-yellow:         #FFBE0B;

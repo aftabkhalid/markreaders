@@ -1,0 +1,39 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+
+<div class="blog-header d-flex align-items-center justify-content-center">
+  <h1 class="huge">BLOG</h1>
+</div>
+
+
+<div class="container" style="margin-top: 40px;">
+
+  <div class="row justify-content-center">
+    <div class="col-8">
+
+        {% for post in site.posts %}
+          <div class="post">
+            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+            <div class="stamp d-flex">
+              <figure class="author-avatar">
+                <img src="https://1.gravatar.com/userimage/11227337/85544ef2447ae14b349dd6a0343097fd?s=100&r=pg&d=mp" alt="Aftab Khalid" class="avatar">
+              </figure>
+              <time datetime="{{ post.date | date: "%b %-d, %Y" }}"></time>
+              <p>by {% if post.author %}{{ post.author }}{% endif %} • {{ post.date | date: "%b %-d, %Y" }}</p>
+            </div>
+
+            <p>{{ post.excerpt }}</p>
+            <a class="btn btn-lg btn-theme btn-theme-sm btn-theme-purple" href="{{ post.url }}">Continue Reading</a>
+          </div>
+        {% endfor %}
+
+
+    </div>
+  </div>
+
+</div>

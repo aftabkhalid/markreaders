@@ -1,0 +1,33 @@
+quote1:
+- heading: RANDOM PROJECTS
+  subheading: I do everything with my core values of honesty, hard work, and trust.
+
+quote2:
+- heading: What <br> They<br> Say
+  description: Mr. Aftab is very creative person and i found his service high standards and recommend people to consult for their project. Good Luck!
+  footer: Asim Khan - Project Manager
+
+portfolioThumb1:
+- thumb:
+  imagePath: images/6.png
+  url: /projects/dukaan-client
+- thumb:
+  imagePath: images/7.png
+  url: /projects/blueeast
+- thumb:
+  imagePath: images/1.png
+  url: /projects/dukaan-enterprise
+- thumb:
+  imagePath: images/5.png
+  url: /projects/orient-rozgaar
+
+portfolioThumb2:
+- thumb:
+  imagePath: images/2.png
+  url: /projects/OGC
+- thumb:
+  imagePath: images/3.png
+  url: /projects/mevris
+- thumb:
+  imagePath: images/4.png
+  url: /projects/mevris-website

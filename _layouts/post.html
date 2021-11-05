@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="container-custom portfolio-pg">
+  <div class="row justify-content-center"">
+    <div class="col-7">
+      <div class="post">
+        <h1>{{ page.title }}</h1>
+
+        <!-- <span>{% if page.categories %} • <a href="{{ site.tags.CATEGORY }}"> {{ page.categories }} </a> {% endif %}</span> -->
+
+        <div class="stamp d-flex">
+          <figure class="author-avatar">
+            <img src="https://1.gravatar.com/userimage/11227337/85544ef2447ae14b349dd6a0343097fd?s=100&r=pg&d=mp" alt="Aftab Khalid" class="avatar">
+          </figure>
+          <time datetime="{{ page.date | date: "%b %-d, %Y" }}"></time>
+          <p>by {% if page.author %}{{ page.author }}{% endif %} • {{ page.date | date: "%b %-d, %Y" }}</p>
+        </div>
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
