@@ -23,7 +23,7 @@ encoding:         UTF-8
 
 # Custom vars
 current_version:  1.0.0
-repo:             git@github.com:aftabkhalid/designs.git
+repo:             git@github.com:aftabkhalid/markreaders.git
 
 
 plugins:
