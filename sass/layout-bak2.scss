@@ -1,0 +1,348 @@
+body {
+  color: $mk-gray-800;
+  font-family: $theme-font-family-base;
+  font-size: ($font-size-base * 1.125);
+  font-weight: 300;
+  color: #3a3f42;
+}
+
+.introduction {
+  padding: 0 130px 0 0;
+}
+
+.navbar-theme {
+  .nav-item {
+    .nav-link {
+      color: $mk-dark-blue;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+header[role="site-header"] {
+  //position: relative;
+}
+
+// Logo
+.ak-logo {
+  text-align: center;
+  a {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+
+    text-decoration: none;
+    color: $mk-dark-blue;
+    position: absolute;
+    top: 2em;
+    left: 2.5em;
+    z-index: 1;
+    width: 110px;
+    img {
+      width: 60px;
+    }
+    span {
+      display: block;
+      margin-top: 4px;
+      &:after {
+        animation-name: ak-logo-cursor;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        content: "_";
+      }
+    }
+  }
+}
+
+@keyframes ak-logo-cursor {
+  0%      {opacity: 0;}
+  40%     {opacity: 0;}
+  50%     {opacity: 1;}
+  90%     {opacity: 1;}
+  100%    {opacity: 0;}
+}
+
+.big-name {
+  h1 {
+    font-size: 215px;
+  }
+  span {
+    margin-top: -40px;
+    display: block;
+    font-size: 34px;
+  }
+}
+
+// Section Gradients
+.remote {
+  //background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+}
+
+.freelance {
+  //background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.talk {
+  background: linear-gradient(to top, #D5DEE7 0%, #E8EBF2 75%, #fff 100%)
+}
+
+.hm-portfolio {
+  padding: 100px 0;
+
+  img {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+}
+
+
+//
+// Portfolio Grid
+
+.portfolio-grid {
+	column-width: 320px;
+	column-gap: 15px;
+	padding-top: 50px;
+
+  figure {
+  	transition: opacity .4s ease-in-out;
+    display: inline-block;
+    column-break-inside: avoid;
+    border-radius: 12px;
+    margin: 15px 0;
+
+    img {
+    	width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      box-shadow: 0px 40px 28px -22px rgba(33,42,54,.25);
+      transition: .4s ease-in-out;
+    }
+  }
+
+  &:hover figure:not(:hover) {
+  	opacity: 0.6;
+  }
+
+  .portflio-caption {
+    padding: 40px;
+
+    h6 {
+      font-size: 14px;
+      color: #919EAB;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .portfolio-grid {
+    column-gap: 0px;
+
+    figure {
+      width: 100%;
+    }
+  }
+}
+
+// Theme buttons
+
+.btn-theme {
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 200px;
+  text-transform: uppercase;
+
+  &:focus {
+    margin-top: 1px;
+  }
+}
+
+.btn-theme-sm {
+  font-size: 12px;
+  padding: 15px 30px;
+}
+
+.btn-theme-purple {
+  background-color: $mk-blue;
+  color: $white;
+  box-shadow: 0px 28px 32px -22px rgba(10,3,235,1);
+
+  &:hover {
+    background-color: #4742F0;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: #4742F0;
+    margin-top: 1px;
+    box-shadow: 0px 18px 22px -11px rgba(10,3,235,.45);
+  }
+}
+
+.btn-resume {
+  margin-left: 10px;
+}
+
+// .outline {
+//   background-color: $white;
+//   border: 2px solid $mk-blue;
+//   color: $mk-blue;
+//   box-shadow: none;
+// }
+
+//
+////
+
+.mouse-indicator {
+  margin-top: 50px;
+  svg {
+    height: 5%;
+    width: 5%;
+  }
+  .mouse-wheel {
+    animation-name: mouse-wheel-animation;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    &:hover {
+    }
+  }
+
+  @keyframes mouse-wheel-animation {
+    0%    {transform: translateY(0px)}
+    50%   {transform: translateY(5px)}
+    100%  {transform: translateY(0px)}
+  }
+}
+
+//
+////
+
+.blockquote-footer {
+  margin-top: 20px;
+}
+
+//
+////
+// Custom Container for portfolio page
+
+.container-custom {
+  max-width: 1430px;
+  @include make-container();
+}
+
+.portfolio-pg {
+  padding-top: 170px;
+  img {
+    width: 100%;
+  }
+}
+
+//
+//// Overrides
+
+.badge {
+  font-weight: normal;
+}
+
+//
+//// Responsive layout
+
+@include media-breakpoint-down(md) {
+  .section {
+    padding: 50px 30px 0 30px;
+  }
+
+  .introduction {
+    padding: 0 0 0 0;
+  }
+
+  .big-name {
+    h1 {
+      font-size: 100px;
+    }
+    span {
+      margin-top: -20px;
+      display: block;
+      font-size: 34px;
+    }
+  }
+
+  .mouse-indicator {
+    svg {
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  .container-custom {
+    max-width: 100%;
+    @include make-container();
+  }
+
+  .btn-resume {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+
+
+}
+
+// Blog
+
+.post {
+  border-bottom: 1px solid #eee;
+  padding: 60px 0;
+  font-family: 'Arbutus Slab', serif;
+
+  h1 {
+    a {
+      color: #000;
+      :hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.blog-header {
+  background-color: #395fd2;
+  color: #fff;
+  height: 400px;
+  text-align: center;
+  margin-top: 150px;
+
+  h1 {
+    color: #fff;
+  }
+}
+
+footer[role="footer"] {
+  padding: 30px 0;
+}
+
+.stamp {
+  .author-avatar {
+    margin-bottom: 30px;
+
+    .avatar {
+      margin-bottom: 0px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+  }
+  p {
+    line-height: .5;
+    font-size: 15px;
+  }
+}
